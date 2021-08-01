@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+    Đăng nhập
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">
+                Vui lòng hãy đăng nhập !
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.password.label() }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+
+            <br>
+
+
+            <div class="checkbox mb-3">
+               <h6>bạn không có tài khoản vui lòng hãy đăng ký! </h6>
+               <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Đăng Ký</a>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

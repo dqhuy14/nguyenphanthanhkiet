@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    Nguyễn Kiệt
+{% endblock %}
+{% block content %}
+    <img src="/static/img/1.jpg" class="img-fluid" alt="Responsive image">
+            <div class="jumptron text-center" style="margin-top: -400px;">
+            <h1  style="color: white; border: coral; border-bottom: coral 3px;">Chào mừng bạn tới Account Market</h1>
+                <p class="lead"></p>
+            <p class="lead font-weight-normal">Bắt đầu mua sản phẩm bằng cách nhấp vào liên kết bên dưới </p>
+                <p class="lead"></p>
+                <p>
+            <a class="btn btn-primary" style="background: rgb(230, 71, 71); color:white;" href="{{ url_for('market_page') }}">Bắt Đầu</a>
+                </p>
+        </div>
+    <div class="row marketing" style="margin-top: 253px;">
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+{% endblock %}
